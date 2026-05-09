@@ -14,6 +14,10 @@ The system supports two working modes: keyword-oriented academic literature retr
 - Engineering-level prompt constraints to reduce model hallucination
 - Good modularity, controllability and expandability
 
+## Environment Setup
+Fill in your LLM API Key, model endpoint, and model name in the `.env` file.
+
+   
 ## How to Run
 ```bash
 pip install -r requirements.txt
