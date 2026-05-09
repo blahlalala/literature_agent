@@ -1,32 +1,20 @@
-基于多智能体的学术文献分析与选题推荐系统
-本项目实现了一个由 5 个智能体（Planner、Retriever、Reader、Analyst、Writer） 协作完成的文献自动分析系统。
-系统支持两种输入模式：关键词检索 与 PDF 文献精读，能够自动生成结构化文献综述与研究缺口分析。
-主要功能
-自动识别输入类型并规划工作流
-调用 arXiv / Semantic Scholar 免费 API 获取最新文献
-抽取 PDF 文本并进行结构化解析
-多智能体协作归纳研究趋势、分析研究空白
-生成符合学术规范的报告，抑制大模型幻觉
-支持引用标注，保证内容可追溯
-技术特点
-模块化多智能体架构
-严格的 Prompt 约束与事实校验
-无付费 API，完全开源可用
-支持近 3 年文献时间过滤
-English
-Multi-Agent Based Academic Literature Analysis & Topic Recommendation System
-This project implements an automatic literature analysis system powered by five cooperative agents: Planner, Retriever, Reader, Analyst, and Writer.
-The system supports two input modes:
-Keyword-based literature retrieval and PDF document deep reading, and can generate structured literature reviews with research gap analysis.
-Features
-Automatic input type detection and workflow planning
-Free academic API integration (arXiv, Semantic Scholar)
-PDF text extraction and structured parsing
-Multi-agent collaboration for trend analysis and research gap identification
-Hallucination suppression with strict prompt constraints
-Traceable output with citation support
-Characteristics
-Modular multi-agent architecture
-Fact-checking and strong constraint mechanisms
-No paid APIs, fully open-source
-Time filtering for recent 3-year literature
+# Multi-Agent Based Academic Literature Analysis and Topic Selection Recommendation System
+
+## Project Introduction
+This project designs and implements a literature analysis system based on a multi-agent collaborative framework. The whole research workflow is divided into five independent and functional agents: Planner Agent, Retriever Agent, Reader Agent, Analyst Agent and Writer Agent. Instead of relying on a single large language model to complete all tasks, each agent undertakes a specific module to improve system modularity, controllability and scalability.
+
+The system supports two working modes: keyword-oriented academic literature retrieval and local PDF in-depth reading and analysis. It can automatically retrieve academic literature from arXiv and Semantic Scholar, extract core content from PDF files, summarize research trends, analyze existing research gaps, and finally generate standard academic literature reviews and feasible topic selection suggestions. Strict prompt constraints are adopted in all agents to ensure all generated content is based on real literature text, with standard reference numbers, effective suppression of LLM hallucination, and improved academic credibility and factual traceability.
+
+## Main Features
+- Automatic user intention recognition and adaptive workflow scheduling
+- Integration with arXiv and Semantic Scholar API for latest literature retrieval with 3-year time filtering
+- Long-text PDF parsing and structured academic information extraction
+- Multi-agent collaborative analysis for research trend summary and research gap mining
+- Standardized academic report generation with accurate citation marking
+- Engineering-level prompt constraints to reduce model hallucination
+- Good modularity, controllability and expandability
+
+## How to Run
+```bash
+pip install -r requirements.txt
+python main.py
